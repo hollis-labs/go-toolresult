@@ -1,5 +1,21 @@
 # go-toolresult
 
+## Moved to substrate
+
+This standalone repository is deprecated. New development lives in the
+[`github.com/hollis-labs/substrate/agent`](https://github.com/hollis-labs/substrate/tree/agent/v0.2.0/agent)
+module, released as **`agent/v0.2.0`**.
+
+```sh
+go get github.com/hollis-labs/substrate/agent@v0.2.0
+```
+
+Follow the [package and API migration guide](https://github.com/hollis-labs/substrate/blob/agent/v0.2.0/agent/toolresult/MIGRATION.md) when updating imports;
+the consolidation can include API changes. Existing standalone tags and history
+are preserved. The documentation below describes the standalone releases and
+is retained for historical reference. Applications migrate separately; this
+redirect does not deploy or update any consumer.
+
 Keeps oversized tool results out of an LLM's context without losing them. A
 result over a byte budget is stored in full under a host-derived scope and
 replaced by a bounded preview plus a pointer; the agent recovers the rest with
